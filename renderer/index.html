@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'" /> -->
+</head>
+
+<body>
+    <div id="custom-toast-container"></div>
+    <div class="section" id="inScope">
+        <h2 class="section-header">In Scope</h2>
+        <form method="get" action="#" id="inForm" class="form-container">
+            <div class="input-container">
+                <input type="text" id="inHost" name="inHost" class="large-input" placeholder="Host (without protocol)"><br>
+                <input type="number" id="inPort" name="inPort" class="large-input" placeholder="Port">
+            <div class="radio-container">
+                <input type="radio" name="inProtocol" value="HTTP" id="inHTTP"><label for="inHTTP">HTTP</label>
+                <input type="radio" name="inProtocol" value="HTTPS" id="inHTTPS"><label for="inHTTPS">HTTPS</label><br>
+            </div>
+            <button id="inButton" type="button">Add to Scope</button>
+            </div>
+        </form>
+        <table class="table-container" id="inHosts">
+            <tr id="in0">
+                <th>S. No.</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Remove</th>
+            </tr>
+        </table>
+        <img src="no_records_1.jpeg" height="130px" width="300px" id="inNoRecords" style="display: block;">
+    </div>
+
+    <div class="spacer"></div>
+    
+    <div class="section" id="outOfScope">
+        <h2 class="section-header">Out of Scope</h2>
+        <form method="get" action="#" id="outForm" class="form-container">
+            <div class="input-container">
+                <input type="text" id="outHost" name="outHost" class="large-input" placeholder="Host (without protocol)"><br>
+                <input type="number" id="outPort" name="outPort" class="large-input" placeholder="Port">
+                <div class="radio-container">
+                    <input type="radio" name="outProtocol" value="HTTP" id="outHTTP"><label for="outHTTP">HTTP</label>
+                    <input type="radio" name="outProtocol" value="HTTPS" id="outHTTPS"><label for="outHTTPS">HTTPS</label><br>
+                </div>
+                <button id="outButton" type="button">Remove from Scope</button>
+            </div>
+        </form>
+        <table class="table-container" id="outHosts">
+            <tr id="out0">
+                <th>S. No.</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Remove</th>
+            </tr>
+        </table>
+        <img src="no_records.jpg" height="130px" width="300px" id="outNoRecords" style="display: block;">
+    </div>
+    <div>
+        <button id="burpify" type="button">Burpify</button>
+    </div>
+    <div>
+        <button id="reset" type="button">Reset</button>
+    </div>
+    <script src="js/renderer.js"></script>
+</body>
+
+</html>

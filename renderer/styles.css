@@ -1,0 +1,226 @@
+body {
+    background-color: #121212;
+    width: 760px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default body margin */
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+}
+
+/* CSS for form containers */
+.form-container {
+    width: 50%;
+    display: inline-block;
+    float: left; /* Float left to place the form on the left */
+}
+
+/* CSS for table containers */
+.table-container {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    float: right; /* Float right to place the table on the right */
+    max-height: 150px; /* Adjust the height as needed */
+    overflow-y: auto; /* Add vertical scrollbar if the content exceeds the height */
+}
+
+/* CSS to style the sections */
+.section {
+    background-color: #121212;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 90%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.section:hover {
+    transform: scale(1.03);
+}
+
+.section-header {
+    background-color: #333;
+    font-family: cursive;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Updated CSS for smaller input fields */
+.large-input {
+    width: 80%; /* Reduce the width to 90% */
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 5px;
+    background-color: #3b3b3b;
+}
+
+input:disabled {
+    background-color: #1f1f1f; /* Change this color to your desired background color */
+}
+
+/* Add this CSS to remove the yellow outline on input focus */
+input:focus {
+    outline: none;
+}
+
+/* CSS for radio buttons */
+.radio-container {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container label {
+    background-color: #121212;
+    color: #ccc;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.radio-container label:hover {
+    background-color: #343434;
+}
+
+/* Center-align the "Add to Scope" and "Remove from Scope" buttons */
+#inButton, #outButton, #reset {
+    display: block;
+    width: 170px;
+    margin: 10px auto; /* Center-aligned with 10px top and bottom margin */
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #16a085, #1abc9c);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#reset {
+    width: 80px !important;
+    padding: 6px 20px !important;
+}
+
+#inButton:hover, #outButton:hover, #reset:hover  {
+    background: linear-gradient(to bottom, #1abc9c, #16a085);
+    transform: scale(1.05);
+}
+
+/* Table formatting */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Styling for newly added rows in tables */
+.table-row {
+    background-color: #333333; /* Same as existing rows */
+    color: #ffffff;
+    border-radius: 10px; /* Apply rounded corners to table cells */
+}
+
+/* Add rounded corners to table cells */
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px; /* Apply rounded corners */
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Limit the width of the table cell to 50px */
+td {    
+    max-width: 50px;
+    white-space: nowrap;      /* Prevent text from wrapping */
+    overflow: hidden;        /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis for overflow */
+    position: relative;      /* Add relative positioning for the parent element */
+    transition: max-width 0.5s; /* Add a transition for smooth effect */
+}
+
+tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+/* Define the custom tooltip style */
+.custom-tooltip {
+    position: relative;
+}
+
+/* Center and style the "Burpify" button */
+#burpify {
+    display: block;
+    font-family: cursive;
+    font-weight: bold;
+    margin: 10px auto; /* Center the button horizontally */
+    padding: 20px 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #16a085, #1abc9c);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#burpify:hover {
+    background: linear-gradient(to bottom, #d43207, #ff5733);
+    transform: scale(1.05);
+}
+
+/* Apply custom styles to WebKit-based scrollbars */
+.table-container::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Track - the area the scrollbar occupies */
+.table-container::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Track background color */
+}
+
+/* Handle - the draggable part of the scrollbar */
+.table-container::-webkit-scrollbar-thumb {
+    background: #19b596; /* Scrollbar handle color */
+    border-radius: 6px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #18ad90; /* Color on hover */
+}
+
+.custom-toast {
+    background: red;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+#custom-toast-container {
+    position: fixed;
+    top: 0px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+}  
+  

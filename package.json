@@ -1,0 +1,16 @@
+{
+  "name": "burpify",
+  "productName": "Burpify",
+  "version": "1.0.0",
+  "description": "Generate Burp Suite Configuration Files",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Nidhish Gambhir",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^26.2.0",
+    "@electron/packager": "^18.0.0"
+  }
+}
