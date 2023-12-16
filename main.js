@@ -7,14 +7,14 @@ const isDev = process.env.NODE_ENV !== 'production';
 function createWindow() {
     const Window = new BrowserWindow({
         title: "Burpify",
-        width: 770, //1225
+        width: 770, //1225 if(isDev)
         height: 840,
-        resizable: false,
+        resizable: true,
         webPreferences: {
             contextIsolation: true,
             nodeIntegration: true,
             preload: path.join(__dirname, 'preload.js')
-          }
+        }
     });
 
     // if(isDev)
